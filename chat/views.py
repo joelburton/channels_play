@@ -1,6 +1,7 @@
+"""Views for chat app."""
+
 import json
 
-from django.shortcuts import render
 from django.utils.safestring import mark_safe
 from django.views.generic import TemplateView
 

@@ -1,8 +1,10 @@
-from django.conf.urls import url
+"""HTTP Routing for chat app."""
+
+from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.IndexView.as_view(), name='index'),
-    url(r'^(?P<room_name>[^/]+)/$', views.RoomView.as_view(), name='room'),
+    path('', views.IndexView.as_view(), name='index'),
+    path('<room_name>/', views.RoomView.as_view(), name='room'),
 ]
